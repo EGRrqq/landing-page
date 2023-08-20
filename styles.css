@@ -12,3 +12,30 @@
     padding: 0;
     margin: 0;
 }
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-bg-color);
+    padding: 16px 128px;
+}
+
+.header-logo-text {
+    color: var(--main-text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-text);
+}
