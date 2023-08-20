@@ -13,17 +13,28 @@
     margin: 0;
 }
 
-
 header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-bg-color);
+    padding: 16px 128px;
+    gap: 16px;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--dark-bg-color);
-    padding: 16px 128px;
 }
 
-.header-logo-text {
+.logo-text {
     color: var(--main-text);
+    font-size: 24px;
+}
+
+.main-text {
+    color: var(--main-text);
+    font-size: 48px;
 }
 
 .nav-links {
@@ -35,7 +46,55 @@ ul {
     list-style: none;
 }
 
+.link-text, .hero-text {
+    color: var(--secondary-text);
+    font-size: 18px;
+}
+
 a {
     text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 96px 0;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    flex-basis: 35%;
+}
+
+.image-placeholder {
+    width: 500px;
+    height: 250px;
+    background-color: rgb(124, 124, 124);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
     color: var(--secondary-text);
+}
+
+button {
+    background-color: var(--action-bg-color);
+    padding: 8px;
+    height: 2.5rem;
+    width: 8rem;
+    border: 0px solid;
+    border-radius: 8px;
+    color: var(--main-text);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    border: 1px solid var(--main-text)
 }
