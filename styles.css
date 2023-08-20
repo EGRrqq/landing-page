@@ -17,7 +17,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: var(--dark-bg-color);
-    padding: 16px 128px;
+    padding: 32px 128px;
     gap: 16px;
 }
 
@@ -25,14 +25,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
-.logo-text {
+.logo-heading {
     color: var(--main-text);
     font-size: 24px;
 }
 
-.main-text {
+.main-heading {
     color: var(--main-text);
     font-size: 48px;
 }
@@ -60,14 +62,17 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 96px 0;
+    flex-wrap: wrap;
+    gap: 64px;
+    justify-content: center;
 }
 
 .hero-left {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     justify-content: center;
-    flex-basis: 35%;
+    flex-basis: 50%;
 }
 
 .image-placeholder {
@@ -97,4 +102,54 @@ button {
 
 button:active {
     border: 1px solid var(--main-text)
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 128px;
+    gap: 32px;
+}
+
+.main-content-heading {
+    color: var(--dark-bg-color);
+    font-size: 32px;
+    text-align: center;
+}
+
+.image-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.image-placeholder-2 {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--action-bg-color);
+    border-radius: 8px;
+}
+
+.image-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 16px;
+    align-items: center;
+}
+
+.image-text {
+    max-width: 150px;
+    max-height: 150px;
 }
