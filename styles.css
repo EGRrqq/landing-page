@@ -1,7 +1,6 @@
 :root {
     --dark-bg-color: #1F2937;
     --action-bg-color: #3882F6;
-    --quote-bg-color: #E5E7EB;
     --main-text: #F9FAF8;
     --secondary-text: #E5E7EB;
     --header-text: #1F2937;
@@ -29,13 +28,15 @@ header {
     gap: 32px;
 }
 
-.logo-heading {
+.logo-heading, .main-heading, .action-heading, .action-text {
     color: var(--main-text);
+}
+
+.logo-heading {
     font-size: 24px;
 }
 
 .main-heading {
-    color: var(--main-text);
     font-size: 48px;
 }
 
@@ -87,19 +88,27 @@ a {
 }
 
 button {
-    background-color: var(--action-bg-color);
     padding: 8px;
     height: 2.5rem;
     width: 8rem;
-    border: 0px solid;
     border-radius: 8px;
-    color: var(--main-text);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    color: var(--main-text);
 }
 
-button:active {
+.button-fill {
+    background-color: var(--action-bg-color);
+    border: 0px solid;
+}
+
+.button-outline {
+    background-color: inherit;
+    border: 1px solid var(--main-text)
+}
+
+.button-filled:active {
     border: 1px solid var(--main-text)
 }
 
@@ -154,7 +163,7 @@ button:active {
 }
 
 .quote-section {
-    background-color: var(--quote-bg-color);
+    background-color: var(--secondary-text);
     flex-basis: 0%;
 }
 
@@ -176,4 +185,36 @@ button:active {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.action-section {
+    display: flex;
+    justify-content: center;
+    padding: 64px;
+}
+
+.action-section-wrapper {
+    background-color: var(--action-bg-color);
+    display: flex;
+    gap: 96px;
+    padding: 32px 128px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.action-left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.action-heading {
+    font-size: 24px;
+}
+
+.action-text {
+    font-size: 18px;
 }
