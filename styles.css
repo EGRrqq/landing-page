@@ -1,7 +1,7 @@
 :root {
     --dark-bg-color: #1F2937;
     --action-bg-color: #3882F6;
-    --quote-bg-color: #35373B;
+    --quote-bg-color: #E5E7EB;
     --main-text: #F9FAF8;
     --secondary-text: #E5E7EB;
     --header-text: #1F2937;
@@ -57,14 +57,13 @@ a {
     text-decoration: none;
 }
 
-.hero {
+.hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 96px 0;
     flex-wrap: wrap;
     gap: 64px;
-    justify-content: center;
 }
 
 .hero-left {
@@ -114,7 +113,7 @@ button:active {
     width: 1px;
 }
 
-.image-section {
+.image-section, .quote-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,7 +123,7 @@ button:active {
 
 .main-content-heading {
     color: var(--dark-bg-color);
-    font-size: 32px;
+    font-size: 36px;
     text-align: center;
 }
 
@@ -152,4 +151,29 @@ button:active {
 .image-text {
     max-width: 150px;
     max-height: 150px;
+}
+
+.quote-section {
+    background-color: var(--quote-bg-color);
+    flex-basis: 0%;
+}
+
+.quote-text {
+    color: var(--dark-bg-color);
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.quote-author, cite {
+    font-style: normal;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
